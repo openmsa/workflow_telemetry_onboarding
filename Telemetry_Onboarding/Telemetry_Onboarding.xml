@@ -8,40 +8,40 @@
   </variables>
   <example/>
   <process name="Process/Telemetry_Onboarding/Process_Create_Instance">
-    <displayName>Create Instance</displayName>
+    <displayName>New Instance</displayName>
     <type>CREATE</type>
     <visibility>5</visibility>
     <allowSchedule/>
     <task name="Task_Create_Instance.py">
       <processPath>/opt/fmc_repository/Process/Telemetry_Onboarding/Process_Create_Instance/Tasks</processPath>
-      <displayName>Create Instance</displayName>
+      <displayName>Create instance</displayName>
     </task>
   </process>
   <process name="Process/Telemetry_Onboarding/Process_Onboard_Devices">
-    <displayName>Onboard Devices</displayName>
+    <displayName>Onboard managed entities</displayName>
     <type>UPDATE</type>
     <visibility>5</visibility>
     <allowSchedule/>
     <task name="Task_Select_Devices.py">
       <processPath>/opt/fmc_repository/Process/Telemetry_Onboarding/Process_Onboard_Devices/Tasks</processPath>
-      <displayName>Select Devices</displayName>
+      <displayName>Select devices</displayName>
     </task>
     <task name="Process/Telemetry_Onboarding/Process_Onboard_Devices/Tasks/Task_Update_tenant_id.py">
       <processPath></processPath>
-      <displayName>Update tenant id</displayName>
+      <displayName>Update tenant ID</displayName>
     </task>
     <task name="Task_Update_Customer_id.py">
       <processPath>/opt/fmc_repository/Process/Telemetry_Onboarding/Process_Onboard_Devices/Tasks</processPath>
-      <displayName>Update Customer id</displayName>
+      <displayName>Update subtenant ID</displayName>
     </task>
     <task name="Task_Update_device_id.py">
       <processPath>/opt/fmc_repository/Process/Telemetry_Onboarding/Process_Onboard_Devices/Tasks</processPath>
-      <displayName>Update device id</displayName>
+      <displayName>Update managed entity ID</displayName>
     </task>
   </process>
   <information>
     <icon/>
-    <description>Workflow to onboard devices for collecting telemetry data</description>
+    <description>Workflow to onboard managed entity for displaying Kibana dashborad for telemetry data</description>
     <displayField>kibana_index_name</displayField>
     <serviceTaskType>python</serviceTaskType>
     <order>10000</order>
